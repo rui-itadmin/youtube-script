@@ -49,6 +49,7 @@ cat /var/cache/bind/lab.local.zone
 ## dns-master-101 add a new record and verify that everything is going fine.
 sudo vi /var/cache/bind/lab.local.zone  
 > update, serial; add a record  
+
 sudo rndc reload  
 
 ## dns2 check new record
@@ -62,7 +63,8 @@ sudo rm -rf /etc/bind/ /var/cache/bind/
 
 
 ## Set dns2 as the master.
-> take keepalived vip  
+> take keepalived vip
+
 dig aaa.lab.local +short @192.168.122.100  
 dig aaa.lab.local +short @192.168.122.101 #got timeout  
 dig aaa.lab.local +short @192.168.122.102  
@@ -121,6 +123,7 @@ dig aaa.lab.local +short @192.168.122.101
 ## dns-master-102 add a new record
 sudo vi /var/cache/bind/lab.local.zone
 > add bbb.lab.local for verity
+
 sudo rndc reload  
 
 ## dns1-slave-101 check zone file
