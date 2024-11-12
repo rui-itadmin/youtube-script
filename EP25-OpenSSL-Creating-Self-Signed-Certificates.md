@@ -1,6 +1,6 @@
 EP25: OpenSSL – Creating Self-Signed Certificates
 ===
-
+https://youtu.be/cOG5nO-ZMQE
 
 In this episode:
 ---
